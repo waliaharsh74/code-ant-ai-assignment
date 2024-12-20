@@ -1,43 +1,10 @@
 import { useState } from 'react';
-import { Key, ArrowUpIcon } from 'lucide-react';
+import { ArrowUpIcon } from 'lucide-react';
+import SaasLoginOptions from './SaasLoginOptions';
+import SelfHostedLoginOptions from './SelfHostedLoginOptions';
 
 const LoginPage = () => {
     const [selectedOption, setSelectedOption] = useState<'saas' | 'self-hosted'>('saas');
-
-    const SaasLoginOptions = () => (
-        <div className="space-y-3 w-full max-w-md">
-            <button className="w-full flex items-center justify-center space-x-2 px-4 py-3 border border-gray-300 rounded-lg text-sm font-medium text-gray-700 hover:bg-gray-50 transition-colors">
-                <img src="/api/placeholder/20/20" alt="GitHub" className="w-5 h-5" />
-                <span>Sign in with Github</span>
-            </button>
-            <button className="w-full flex items-center justify-center space-x-2 px-4 py-3 border border-gray-300 rounded-lg text-sm font-medium text-gray-700 hover:bg-gray-50 transition-colors">
-                <img src="/api/placeholder/20/20" alt="Bitbucket" className="w-5 h-5" />
-                <span>Sign in with Bitbucket</span>
-            </button>
-            <button className="w-full flex items-center justify-center space-x-2 px-4 py-3 border border-gray-300 rounded-lg text-sm font-medium text-gray-700 hover:bg-gray-50 transition-colors">
-                <img src="/api/placeholder/20/20" alt="Azure DevOps" className="w-5 h-5" />
-                <span>Sign in with Azure DevOps</span>
-            </button>
-            <button className="w-full flex items-center justify-center space-x-2 px-4 py-3 border border-gray-300 rounded-lg text-sm font-medium text-gray-700 hover:bg-gray-50 transition-colors">
-                <img src="/api/placeholder/20/20" alt="GitLab" className="w-5 h-5" />
-                <span>Sign in with GitLab</span>
-            </button>
-        </div>
-    );
-
-    const SelfHostedLoginOptions = () => (
-        <div className="space-y-3 w-full max-w-md">
-            <button className="w-full flex items-center justify-center space-x-2 px-4 py-3 border border-gray-300 rounded-lg text-sm font-medium text-gray-700 hover:bg-gray-50 transition-colors">
-                <img src="/api/placeholder/20/20" alt="GitLab" className="w-5 h-5" />
-                <span>Self Hosted GitLab</span>
-            </button>
-            <button className="w-full flex items-center justify-center space-x-2 px-4 py-3 border border-gray-300 rounded-lg text-sm font-medium text-gray-700 hover:bg-gray-50 transition-colors">
-                <Key className="w-5 h-5" />
-                <span>Sign in with SSO</span>
-            </button>
-        </div>
-    );
-
     return (
 
         <div className="flex h-screen ">
@@ -80,12 +47,13 @@ const LoginPage = () => {
                         <div className="flex">
                             <div>
                                 <div className="w-8 h-8 bg-purple-100 rounded-full mb-2 flex items-center justify-center">
-                                    <div className="w-4 h-4 bg-purple-500 rounded-full"></div>
+                                    {/* <div className="w-4 h-4 bg-purple-500 rounded-full"></div> */}
+                                    <img src="pie.png" alt="" />
                                 </div>
-                                <div className="text-sm text-gray-600 mb-1">Issues Fixed</div>
+                                <div className="text-sm text-gray-600 mb-1 font-semibold">Issues Fixed</div>
                                 <div className="text-2xl font-bold mb-2">500K+</div>
                             </div>
-                            <div className="flex flex-col   items-center text-sm text-blue-600">
+                            <div className="flex flex-col items-center text-sm text-blue-600 font-semibold">
                                 <div className='flex'>
 
                                     <ArrowUpIcon className="w-4 h-4 mr-1" />
@@ -103,10 +71,10 @@ const LoginPage = () => {
                     <img src="https://framerusercontent.com/images/dPg31SgCdLwGMsUqh0jsRwrgPQU.png" className='text-black' alt="" />
                 </div>
             </div>
-            <div className=" p-10 w-full bg-gray-100">
+            <div className=" p-10 w-full bg-gray-100   ">
 
-                <div className="w-full max-w-md bg-white m-auto p-4">
-                    <div className="text-center mb-8">
+                <div className="w-full max-w-md bg-white m-auto p-4 mt-20  ">
+                    <div className="text-center  mb-8">
                         <div className="flex justify-center mb-4">
                             <img src="https://framerusercontent.com/images/dPg31SgCdLwGMsUqh0jsRwrgPQU.png" alt="CodeAnt AI" className="h-12 w-12" />
                             <span className="text-2xl font-semibold ml-2">CodeAnt AI</span>
