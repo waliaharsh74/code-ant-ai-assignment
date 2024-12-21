@@ -73,7 +73,7 @@ const LoginPage = () => {
             </div>
             <div className=" p-10 w-full bg-gray-100   ">
 
-                <div className="w-full max-w-md bg-white m-auto p-4 mt-20  ">
+                <div className="w-full max-w-md bg-white m-auto p-4 mt-16  ">
                     <div className="text-center  mb-8">
                         <div className="flex justify-center mb-4">
                             <img src="https://framerusercontent.com/images/dPg31SgCdLwGMsUqh0jsRwrgPQU.png" alt="CodeAnt AI" className="h-12 w-12" />
